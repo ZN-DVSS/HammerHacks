@@ -7,11 +7,43 @@
                 width: 600px;
                 height: auto;
             }
+
+            h1{
+                color:rgb(33, 107, 100);
+            }
+
         </style>
     </head>
     <body>
         <h1> My Cool Website </h1>
         <p> I think HTML is neat</p>
-        <img src="https://robbreport.com/wp-content/uploads/2019/12/ssc-tuatara.jpg?w=1000"
+        <img src="https://robbreport.com/wp-content/uploads/2019/12/ssc-tuatara.jpg?w=1000">
+        <blockquote> "It's actually very simple"</blockquote>
+        <button onclick = "ChangeQuote()">Change Quote</button>
+
+        <script>
+            let index = 0;
+
+            function ChangeQuote(){
+                let quotes= [ 
+                    `"I don't think we'll compete again today (Proceeds to get event highscore)" - Zeyad Nasr`,
+                    `"I will win everything on my last year. I deserve it" - Zeyad Nasr`,
+                    `"Siiiuu" - Cristiano Ronaldo`,
+                    `"It's Actually Very Simple"`
+                ];
+
+                let blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                index%= quotes.length;
+                /*if (index>=4){
+                    index = 0
+                }
+                    */
+            }
+
+        </script>
+
     <body>
 </html>
